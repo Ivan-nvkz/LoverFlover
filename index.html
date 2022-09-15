@@ -41,7 +41,18 @@
                         <nav class="menu">
                            <ul class="menu__list">
                               <li class="mobile__menu-clouse-item">
-                                 <button class="mobile__menu-clouse">X</button>
+                                 <button class="mobile__menu-clouse">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M22.3827 6.76929L23.2311 7.61769L7.61793 23.2297L6.76953 22.3819L22.3827 6.76929Z"
+                                          fill="#43FFD2" />
+                                       <path
+                                          d="M7.61793 6.76929L23.2311 22.3813L22.3827 23.2303L6.76953 7.61829L7.61793 6.76929Z"
+                                          fill="#43FFD2" />
+                                    </svg>
+
+                                 </button>
                               </li>
                               <li class="menu__list-item-first"></li>
                               <li class="menu__list-item sub-menu__list-item ">
@@ -101,6 +112,29 @@
                               </li>
                               <li class="menu__list-item" data-da=".menu__list-item-first,767,first">
                                  <button type="button" class="menu__list-btn  menu__list-link-search">поиск</button>
+                              </li>
+                              <li class="menu__list-item-form">
+                                 <div class="menu__list-form">
+                                    <div class="header__content-search">
+                                       <form class="search-header" action="#">
+                                          <input class="search-header__input" type="text" placeholder="поиск">
+                                          <button class="search-header__button" type="submit">
+                                             найти
+                                          </button>
+                                       </form>
+                                       <button class="close-search-header__btn">
+                                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M22.3827 6.76929L23.2311 7.61769L7.61793 23.2297L6.76953 22.3819L22.3827 6.76929Z"
+                                                fill="#43FFD2" />
+                                             <path
+                                                d="M7.61793 6.76929L23.2311 22.3813L22.3827 23.2303L6.76953 7.61829L7.61793 6.76929Z"
+                                                fill="#43FFD2" />
+                                          </svg>
+                                       </button>
+                                    </div>
+                                 </div>
                               </li>
                            </ul>
                         </nav>
@@ -163,7 +197,7 @@
                         <div class="call-body">
                            <a class="call-phone" href="tel:+99997897878"
                               data-da=".menu__list,767,last">+9-999-789-78-78</a>
-                           <button class="call-btn" data-da=".decription-body,767,last">
+                           <button class="call-btn" data-da=".decription-body,767,last" data-popup="#application">
                               <svg class="call-btn__img" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                  <path
@@ -714,7 +748,8 @@
                            </button>
                            <p class="privacy__info">
                               Нажимая на кнопку «Отправить», я даю свое согласие на обработку персональных данных, в
-                              соответствии с Политикой конфиденциальности
+                              соответствии с
+                              <a class="privacy__link" href="#">Политикой конфиденциальности</a>
                            </p>
                         </div>
                      </form>
@@ -775,22 +810,6 @@
          </div>
 
          <!-- <button data-popup="#massageName">Я открываю попап 2</button> -->
-
-         <!-- <div class="swiper">
-            <div class="swiper-wrapper">
-               <div class="swiper-slide">Slide 1</div>
-               <div class="swiper-slide">Slide 2</div>
-               <div class="swiper-slide">Slide 3</div>
-            </div>
-
-            <div class="swiper-pagination"></div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <div class="swiper-scrollbar"></div>
-         </div> -->
-
 
       </main>
 
@@ -994,7 +1013,7 @@
                            <li class="footer__info-item">
                               <ul class="footer__social">
                                  <li class="footer-social__list">
-                                    <a class="social__link" href="#">
+                                    <a class="social__link footer-social__link" href="#">
                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                           xmlns="http://www.w3.org/2000/svg">
                                           <path
@@ -1007,7 +1026,7 @@
                                     </a>
                                  </li>
                                  <li class="footer-social__list">
-                                    <a class="social__link" href="#">
+                                    <a class="social__link footer-social__link" href="#">
                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                           xmlns="http://www.w3.org/2000/svg">
                                           <path
@@ -1027,13 +1046,49 @@
       </footer>
 
 
-      <div class="hystmodal" id="massageName" aria-hidden="true">
+      <div class="hystmodal" id="application" aria-hidden="true">
          <div class="hystmodal__wrap">
             <div class="hystmodal__window" role="dialog" aria-modal="true">
                <button data-hystclose class="hystmodal__close">Закрыть</button>
                <div class="popup__body">
-                  Сообщение 2
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut eveniet sequi, ut reiciendis cum
+                  <div class="questions-section__inner  hystmodal__inner  ">
+                     <div class="questions-top__block  hystmodal-top__block">
+                        <div class="section-title__block  questions-section__block ">
+                           <div class="section-title__body questions-title__body">
+                              <h2 class="section-title questions-section__title hystmodal__title">
+                                 заказать звонок
+                              </h2>
+                           </div>
+                        </div>
+                        <div class="questions__description-box">
+                           <p class="questions__description hystmodal__description">
+                              Впишите свои данные, и мы свяжемся с Вами. Ваши данные ни при каких обстоятельствах не
+                              будут переданы третьим лицам.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="form__block hystmodal-form__block ">
+                        <form class="form hystmodal-form " action="#">
+                           <div class="form__inner">
+                              <div class="form-input__box">
+                                 <input class="input__name hystmodal-input__name" type="text" placeholder="Ваше имя">
+                              </div>
+                              <div class="form-input__box">
+                                 <input class="input__phone hystmodal-input__phone" type="tel"
+                                    placeholder="Ваше номер телефона">
+                              </div>
+                              <button type="submit" class="btn form__btn hystmodal__btn">
+                                 отправить
+                              </button>
+                              <p class="privacy__info">
+                                 Нажимая на кнопку «Отправить», я даю свое согласие на обработку персональных данных, в
+                                 соответствии с
+                                 <a class="privacy__link" href="#">Политикой конфиденциальности</a>
+                              </p>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -1041,6 +1096,8 @@
 
 
    </div>
+
+
 
 
 
