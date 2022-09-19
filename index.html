@@ -30,15 +30,24 @@
       </div>
       <div class="header__wrapper">
          <header class="header">
-            <div class="container">
-               <div class="header__inner">
-                  <div class="header__top">
+            <div class="header__inner">
+               <div class="header__top">
+                  <div class="container">
                      <div class="header__top-inner">
                         <button type="button" class="icon-menu"><span></span></button>
+
                         <a class="logo" href="#" data-da=".menu__list,767,first">
                            <img class="logo__img" src="images/logo.svg" alt="логотип">
                         </a>
                         <nav class="menu">
+
+                           <div class="header__top-mobile">
+                              <div class="title__top-mobile">
+                                 lover flower
+                              </div>
+                           </div>
+
+
                            <ul class="menu__list">
                               <li class="mobile__menu-clouse-item">
                                  <button class="mobile__menu-clouse">
@@ -51,7 +60,6 @@
                                           d="M7.61793 6.76929L23.2311 22.3813L22.3827 23.2303L6.76953 7.61829L7.61793 6.76929Z"
                                           fill="#43FFD2" />
                                     </svg>
-
                                  </button>
                               </li>
                               <li class="menu__list-item-first"></li>
@@ -144,6 +152,8 @@
                         </div>
                      </div>
                   </div>
+               </div>
+               <div class="container">
                   <div class="header__address">
                      <div class="header__address-inner">
                         <div class="header__address-box" data-da=".menu__list,767,last">
@@ -155,6 +165,8 @@
                         </div>
                      </div>
                   </div>
+               </div>
+               <div class="container">
                   <div class="header__content">
                      <div class="header-content__title-box">
                         <div class="header__title">
@@ -735,15 +747,17 @@
                      <form class="form" action="#">
                         <div class="form__inner">
                            <div class="form-input__box">
-                              <input class="input__name" type="text" placeholder="Ваше имя">
+                              <input class="input__name" type="text" placeholder="Ваше имя" required
+                                 name="questionsname">
                            </div>
                            <div class="form-input__box">
-                              <input class="input__phone" type="tel" placeholder="Ваше номер телефона">
+                              <input class="input__phone" type="tel" placeholder="Ваше номер телефона" required
+                                 name="questionsphone">
                            </div>
                            <div class="form-textarea__box">
-                              <textarea class="textarea" placeholder="Ваш комментарий"></textarea>
+                              <textarea class="textarea" placeholder="Ваш комментарий" name="description"></textarea>
                            </div>
-                           <button class="btn form__btn">
+                           <button class="btn form__btn" type="submit">
                               отправить
                            </button>
                            <p class="privacy__info">
@@ -1068,14 +1082,15 @@
                         </div>
                      </div>
                      <div class="form__block hystmodal-form__block ">
-                        <form class="form hystmodal-form " action="#">
+                        <form class="form hystmodal-form" action="send.php" method="POST">
                            <div class="form__inner">
                               <div class="form-input__box">
-                                 <input class="input__name hystmodal-input__name" type="text" placeholder="Ваше имя">
+                                 <input class="input__name hystmodal-input__name" type="text" placeholder="Ваше имя"
+                                    required name="name">
                               </div>
                               <div class="form-input__box">
                                  <input class="input__phone hystmodal-input__phone" type="tel"
-                                    placeholder="Ваше номер телефона">
+                                    placeholder="Ваше номер телефона" required name="phone">
                               </div>
                               <button type="submit" class="btn form__btn hystmodal__btn">
                                  отправить
@@ -1095,6 +1110,21 @@
       </div>
 
 
+
+
+
+
+
+      <div class="overley">
+         <div class="modal" id="thanks">
+            <div class="modal__close"></div>
+            <div class="modal__subtitle">Спасибо!</div>
+            <div class="modal__description">Ваше сообщение отправлено.</div>
+         </div>
+      </div>
+
+
+
    </div>
 
 
@@ -1110,6 +1140,7 @@
    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
    <script src="js/hystmodal.min.js"></script>
+   <script src="js/inputmask.min.js"></script>
    <script src="js/main.min.js"></script>
 </body>
 
